@@ -13,10 +13,10 @@ qmk setup
 
 ### Compile
 ```sh
-qmk compile -kb ferris/sweep -km christnil
+qmk compile -kb ferris/sweep -km seniply
 ```
 
 ### Flash
 ```sh
-qmk flash -kb ferris/sweep -km christnil
+qmk flash -kb ferris/sweep -km seniply
 ```
