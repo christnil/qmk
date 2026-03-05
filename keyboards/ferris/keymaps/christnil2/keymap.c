@@ -17,7 +17,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,         KC_W,         KC_F,         KC_P,         KC_B,         KC_J,               KC_L,              KC_U,               KC_Y,               KC_SCLN,
     LSFT_T(KC_A), LT(FUNCTION_LAYER, KC_R), LT(MOUSE_LAYER, KC_S), LT(RIGHT_SYMBOLS_LAYER, KC_T), KC_G, KC_M, LT(LEFT_SYMBOLS_LAYER, KC_N), LT(NAVIGATION_LAYER, KC_E), LT(NUMBERS_LAYER, KC_I), LSFT_T(KC_O),
     KC_Z,         LCTL_T(KC_X), LALT_T(KC_C), LGUI_T(KC_D), KC_V,         KC_K,               RGUI_T(KC_H),     LALT_T(KC_COMM),    LCTL_T(KC_DOT),     KC_SLSH,
-    KC_P0,        KC_BSPC,      LT(ALWAYS_ACCESSIBLE_LAYER, KC_SPC), KC_P1
+    LCTL_T(KC_ESC), KC_BSPC,      LT(ALWAYS_ACCESSIBLE_LAYER, KC_SPC), LGUI_T(KC_ENT)
   ),
 
   [MOUSE_LAYER] = LAYOUT_split_3x5_2(
