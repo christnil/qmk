@@ -1,0 +1,142 @@
+layout: {qmk_keyboard: ferris/sweep, layout_name: LAYOUT_split_3x5_2}
+layers:
+  L0:
+  - [Q, W, F, P, B, J, L, U, Y, ;]
+  - [A, R, S, T, G, M, N, E, I, O]
+  - [Z, X, C, D, V, K, H, ',', ., /]
+  - ['LT(ALWAYS ACCESSIBLE LAYER,TAB)', 'LT(NAVIGATION LAYER,BSPC)', 'LT(SYMBOLS LAYER,SPC)', 'LT(NUMBERS LAYER,ENT)']
+  L1:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - [A, S, D, F, G, H, J, K, L, ;]
+  - [Z, X, C, V, B, N, M, ',', ., /]
+  - ['LT(ALWAYS ACCESSIBLE LAYER,TAB)', 'LT(NAVIGATION LAYER,BSPC)', 'LT(SYMBOLS LAYER,SPC)', 'LT(NUMBERS LAYER,ENT)']
+  L2:
+  - - ESC
+    - {t: ▽, type: trans}
+    - HOME
+    - UP
+    - END
+    - {t: ▽, type: trans}
+    - Ctl+LEFT
+    - Ctl+UP
+    - Ctl+RGHT
+    - BSPC
+  - - TAB
+    - {t: ▽, type: trans}
+    - LEFT
+    - DOWN
+    - RGHT
+    - LEFT
+    - DOWN
+    - UP
+    - RGHT
+    - ENT
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - INS
+    - PGUP
+    - PGDN
+    - Alt+LEFT
+    - Alt+DOWN
+    - Alt+RGHT
+    - {t: ▽, type: trans}
+    - DEL
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L3:
+  - - PPLS
+    - PMNS
+    - PAST
+    - PSLS
+    - PEQL
+    - '7'
+    - '8'
+    - '9'
+    - BSPC
+    - {t: ▽, type: trans}
+  - [(, ), '[', ']', '%', '4', '5', '6', '0', .]
+  - - '!'
+    - '@'
+    - '#'
+    - $
+    - {t: ▽, type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - ','
+    - ENT
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L4:
+  - ['!', '@', '#', $, '%', ^, '&', '*', '|', '`']
+  - [(, ), '[', ']', '=', _, '-', +, /, \]
+  - ['{', '}', <, '>', '~', ':', ;, '"', '''', '?']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L5:
+  - - {t: LSFT, h: sticky}
+    - {t: LCTL, h: sticky}
+    - {t: LALT, h: sticky}
+    - {t: LGUI, h: sticky}
+    - CAPS
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - QWERTY
+    - COLEMAK
+  - - {t: MEH, h: sticky}
+    - {t: HYPR, h: sticky}
+    - ESC
+    - ENT
+    - BSPC
+    - {t: ▽, type: trans}
+    - LEFT
+    - DOWN
+    - UP
+    - RGHT
+  - - TAB
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - QK BOOT
+    - {t: ▽, type: trans}
+    - MPRV
+    - MPLY
+    - MNXT
+    - DEL
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L6:
+  - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - F11
+    - F12
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - MPRV
+    - MPLY
+    - MNXT
+    - VOLD
+    - VOLU
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
