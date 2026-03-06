@@ -63,7 +63,7 @@ This keeps your primary layer switching on strong thumb keys, as requested.
 ## Why these design choices
 
 - **No home-row mods:** all alpha keys are tap-only letters for cleaner typing feel.
-- **Easy nav/edit:** holding backspace gives a navigation layer with arrows on both hands (including a full left-hand cluster with `Left/Down/Right` around `Down`), plus dedicated `Backspace` (top-right), `Enter` (below it), `Delete` (bottom-right), `PgUp/PgDn` on the left bottom-right, and right-hand `Ctrl`/`Alt` arrow chords in matching positions.
+- **Easy nav/edit:** holding backspace gives a navigation layer with arrows on both hands (including a full left-hand cluster with `Left/Down/Right` around `Down`), plus dedicated `Backspace` (top-right), `Enter` (below it), `Delete` (bottom-right), `PgUp/PgDn` on the left bottom-right, and a right-hand 3x4 arrow block where rows are `Ctrl`, plain, and `Alt` in the same `Left/Down/Up/Right` order.
 - **Numpad-style numbers:** digits are grouped on the right hand in a numpad-like cluster, while the left hand holds operators and common paired symbols.
 - **Single symbol layer:** both left and right symbol families are available on one layer, avoiding left/right symbol-layer mode switching.
 - **Always-accessible actions:** a dedicated thumb-held layer exposes one-shot `Cmd/Ctrl/Alt/Shift`, plus `Meh`, `Hyper`, `Caps`, media keys, and base-layout toggles.

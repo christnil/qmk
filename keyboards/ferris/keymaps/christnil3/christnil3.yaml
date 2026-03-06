@@ -16,8 +16,8 @@ layers:
     - HOME
     - UP
     - END
-    - {t: ▽, type: trans}
     - Ctl+LEFT
+    - Ctl+DOWN
     - Ctl+UP
     - Ctl+RGHT
     - BSPC
@@ -38,8 +38,8 @@ layers:
     - PGDN
     - Alt+LEFT
     - Alt+DOWN
+    - Alt+UP
     - Alt+RGHT
-    - {t: ▽, type: trans}
     - DEL
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
