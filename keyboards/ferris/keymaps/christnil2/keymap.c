@@ -9,6 +9,12 @@ enum layers {
     FUNCTION_LAYER,
     NUMBERS_LAYER,
     ALWAYS_ACCESSIBLE_LAYER,
+    QWERTY_LAYER,
+};
+
+enum custom_keycodes {
+    COLEMAK = SAFE_RANGE,
+    QWERTY,
 };
 
 // clang-format off
@@ -17,6 +23,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,         KC_W,         KC_F,         KC_P,         KC_B,         KC_J,               KC_L,              KC_U,               KC_Y,               KC_SCLN,
     LSFT_T(KC_A), LT(FUNCTION_LAYER, KC_R), LT(MOUSE_LAYER, KC_S), LT(RIGHT_SYMBOLS_LAYER, KC_T), KC_G, KC_M, LT(LEFT_SYMBOLS_LAYER, KC_N), LT(NAVIGATION_LAYER, KC_E), LT(NUMBERS_LAYER, KC_I), LSFT_T(KC_O),
     KC_Z,         LCTL_T(KC_X), LALT_T(KC_C), LGUI_T(KC_D), KC_V,         KC_K,               RGUI_T(KC_H),     LALT_T(KC_COMM),    LCTL_T(KC_DOT),     KC_SLSH,
+    LCTL_T(KC_ESC), KC_BSPC,      LT(ALWAYS_ACCESSIBLE_LAYER, KC_SPC), LGUI_T(KC_ENT)
+  ),
+
+  [QWERTY_LAYER] = LAYOUT_split_3x5_2(
+    KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,         KC_Y,               KC_U,              KC_I,               KC_O,               KC_P,
+    LSFT_T(KC_A), LT(FUNCTION_LAYER, KC_S), LT(MOUSE_LAYER, KC_D), LT(RIGHT_SYMBOLS_LAYER, KC_F), KC_G, KC_H, LT(LEFT_SYMBOLS_LAYER, KC_J), LT(NAVIGATION_LAYER, KC_K), LT(NUMBERS_LAYER, KC_L), LSFT_T(KC_SCLN),
+    KC_Z,         LCTL_T(KC_X), LALT_T(KC_C), LGUI_T(KC_V), KC_B,         KC_N,               RGUI_T(KC_M),     LALT_T(KC_COMM),    LCTL_T(KC_DOT),     KC_SLSH,
     LCTL_T(KC_ESC), KC_BSPC,      LT(ALWAYS_ACCESSIBLE_LAYER, KC_SPC), LGUI_T(KC_ENT)
   ),
 
@@ -64,9 +77,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [ALWAYS_ACCESSIBLE_LAYER] = LAYOUT_split_3x5_2(
     KC_TRNS, KC_TRNS, KC_COLN, KC_ESC,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS,        KC_DEL,
-    KC_TRNS, KC_PERC, KC_SLSH, KC_ENT,  KC_TRNS, OSM(MOD_MEH), KC_LGUI, KC_TRNS, KC_TRNS,        KC_TRNS,
+    KC_TRNS, KC_PERC, KC_SLSH, KC_ENT,  KC_TRNS, OSM(MOD_MEH), KC_LGUI, QWERTY, COLEMAK,     KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_TRNS, OSM(MOD_HYPR), KC_TRNS, RALT_T(KC_COMM), RCTL_T(KC_DOT), QK_BOOT,
     KC_TRNS, KC_TAB,  KC_NO,   KC_TRNS
   )
 };
 // clang-format on
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!record->event.pressed) {
+        return true;
+    }
+
+    switch (keycode) {
+        case COLEMAK:
+            set_single_persistent_default_layer(COLEMAK_DH_LAYER);
+            return false;
+        case QWERTY:
+            set_single_persistent_default_layer(QWERTY_LAYER);
+            return false;
+    }
+
+    return true;
+}

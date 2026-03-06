@@ -1,0 +1,299 @@
+layout: {qmk_keyboard: ferris/sweep, layout_name: LAYOUT_split_3x5_2}
+layers:
+  L0:
+  - [Q, W, F, P, B, J, L, U, Y, ;]
+  - - {t: A, h: LSFT}
+    - LT(FUNCTION LAYER,R)
+    - LT(MOUSE LAYER,S)
+    - LT(RIGHT SYMBOLS LAYER,T)
+    - G
+    - M
+    - LT(LEFT SYMBOLS LAYER,N)
+    - LT(NAVIGATION LAYER,E)
+    - LT(NUMBERS LAYER,I)
+    - {t: O, h: LSFT}
+  - - Z
+    - {t: X, h: LCTL}
+    - {t: C, h: LALT}
+    - {t: D, h: LGUI}
+    - V
+    - K
+    - {t: H, h: RGUI}
+    - {t: ',', h: LALT}
+    - {t: ., h: LCTL}
+    - /
+  - - {t: ESC, h: LCTL}
+    - BSPC
+    - LT(ALWAYS ACCESSIBLE LAYER,SPC)
+    - {t: ENT, h: LGUI}
+  L1:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - {t: A, h: LSFT}
+    - LT(FUNCTION LAYER,S)
+    - LT(MOUSE LAYER,D)
+    - LT(RIGHT SYMBOLS LAYER,F)
+    - G
+    - H
+    - LT(LEFT SYMBOLS LAYER,J)
+    - LT(NAVIGATION LAYER,K)
+    - LT(NUMBERS LAYER,L)
+    - {t: ;, h: LSFT}
+  - - Z
+    - {t: X, h: LCTL}
+    - {t: C, h: LALT}
+    - {t: V, h: LGUI}
+    - B
+    - N
+    - {t: M, h: RGUI}
+    - {t: ',', h: LALT}
+    - {t: ., h: LCTL}
+    - /
+  - - {t: ESC, h: LCTL}
+    - BSPC
+    - LT(ALWAYS ACCESSIBLE LAYER,SPC)
+    - {t: ENT, h: LGUI}
+  L2:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - BTN1
+    - WH U
+    - BTN2
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - BTN2
+    - ''
+    - BTN1
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - MS L
+    - MS D
+    - MS U
+    - MS R
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - WH L
+    - WH D
+    - WH R
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L3:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - PGUP
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - LEFT
+    - UP
+    - DOWN
+    - RGHT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - LGUI
+    - ''
+    - Ctl+LALT
+    - Ctl+Alt+LSFT
+  - - {t: ▽, type: trans}
+    - HOME
+    - PGDN
+    - END
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L4:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - _
+    - '|'
+    - ''''
+    - {t: ▽, type: trans}
+  - - ^
+    - '*'
+    - '&'
+    - ''
+    - {t: ▽, type: trans}
+    - '#'
+    - '~'
+    - /
+    - '"'
+    - $
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '-'
+    - \
+    - '`'
+    - {t: ▽, type: trans}
+  - - RGB RMOD
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - RGB MOD
+  L5:
+  - - {t: ▽, type: trans}
+    - ':'
+    - <
+    - '>'
+    - ;
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - '{'
+    - '}'
+    - (
+    - )
+    - '@'
+    - {t: ▽, type: trans}
+    - ''
+    - '='
+    - +
+    - '%'
+  - - {t: ▽, type: trans}
+    - '!'
+    - '['
+    - ']'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - VOLD
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - VOLU
+  L6:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - F7
+    - F8
+    - F9
+    - F10
+  - - {t: ▽, type: trans}
+    - ''
+    - Ctl+LALT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - F4
+    - F5
+    - F6
+    - F11
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - F1
+    - F2
+    - F3
+    - F12
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L7:
+  - - PSLS
+    - '7'
+    - '8'
+    - '9'
+    - PPLS
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - '0'
+    - '1'
+    - '2'
+    - '3'
+    - PMNS
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+  - - PAST
+    - '4'
+    - '5'
+    - '6'
+    - PEQL
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  L8:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ':'
+    - ESC
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - DEL
+  - - {t: ▽, type: trans}
+    - '%'
+    - /
+    - ENT
+    - {t: ▽, type: trans}
+    - {t: MEH, h: sticky}
+    - LGUI
+    - QWERTY
+    - COLEMAK
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '!'
+    - {t: ▽, type: trans}
+    - {t: HYPR, h: sticky}
+    - {t: ▽, type: trans}
+    - {t: ',', h: RALT}
+    - {t: ., h: RCTL}
+    - QK BOOT
+  - - {t: ▽, type: trans}
+    - TAB
+    - ''
+    - {t: ▽, type: trans}

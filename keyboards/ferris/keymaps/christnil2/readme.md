@@ -1,6 +1,6 @@
 # christnil2 Ferris Sweep keymap
 
-This keymap is based on the Ferris default layout philosophy (8 layers, heavy tap/hold usage), with these main customizations:
+This keymap is based on the Ferris default layout philosophy (9 layers, heavy tap/hold usage), with these main customizations:
 
 - Base alpha layout is Colemak-DH.
 - `Cmd`/`GUI` is on hold for the bottom-row index keys: `D` and `H`.
@@ -46,6 +46,7 @@ The layout keeps frequently-used keys on the 34-key base and uses hold behaviors
 - Layer `5`: Function keys
 - Layer `6`: Numbers
 - Layer `7`: Always accessible (momentary via Space hold)
+- Layer `8`: Base (QWERTY)
 
 ## Base layer (Layer 0)
 
@@ -120,7 +121,7 @@ Accessed by holding Space from any layer.
 
 - Core utility keys: `Esc`, `Del`, `Enter`, `Tab`
 - Quick symbols for command/editor flows: `:`, `%`, `/`, `!`
-- Default-layer switches: `DF(1)` (Mouse layer default), `DF(0)` (Base default)
+- Default-layer switches: `QWERTY` and `COLEMAK` (persistent default-layer toggle)
 - Bootloader key: `QK_BOOT`
 
 ## Optional: generate visual layer images
@@ -133,5 +134,16 @@ If you want images like the Ferris default docs, the easiest route is `keymap-dr
 
 ### Option B: local CLI
 - Install `keymap-drawer` and generate an SVG from this keymap.
-- Follow the current conversion commands from the project docs: https://github.com/caksoylar/keymap-drawer
-- Commit the generated SVG in this directory and embed it in this README.
+- Run the helper script from repo root:
+
+```sh
+./keyboards/ferris/keymaps/christnil2/generate-layout.sh
+```
+
+- The script regenerates `christnil2.yaml` and `christnil2.svg`, and updates the layout preview block below.
+
+## Layout preview
+
+<!-- layout-preview:start -->
+![christnil2 layout](./christnil2.svg)
+<!-- layout-preview:end -->
