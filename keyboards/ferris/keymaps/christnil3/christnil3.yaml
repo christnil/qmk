@@ -4,7 +4,7 @@ layers:
   - [Q, W, F, P, B, J, L, U, Y, ;]
   - [A, R, S, T, G, M, N, E, I, O]
   - [Z, X, C, D, V, K, H, ',', ., /]
-  - ['LT(ALWAYS ACCESSIBLE LAYER,TAB)', 'LT(NAVIGATION LAYER,SPC)', 'LT(SYMBOLS LAYER,ENT)', 'LT(NUMBERS LAYER,BSPC)']
+  - ['LT(ALWAYS ACCESSIBLE LAYER,SPC)', 'LT(NAVIGATION LAYER,TAB)', 'LT(SYMBOLS LAYER,BSPC)', 'LT(NUMBERS LAYER,ENT)']
   L1:
   - - ESC
     - {t: ▽, type: trans}

@@ -52,18 +52,18 @@ The alpha rows are plain Colemak-DH (no mod-tap home row).
 
 Thumb keys do most of the work:
 
-- Left outer thumb: `Tab` tap, Always-accessible hold (`LT(4, KC_TAB)`)
-- Left inner thumb: `Space` tap, Navigation hold (`LT(1, KC_SPC)`)
-- Right inner thumb: `Enter` tap, Symbols hold (`LT(3, KC_ENT)`)
-- Right outer thumb: `Backspace` tap, Numbers hold (`LT(2, KC_BSPC)`)
+- Left outer thumb: `Space` tap, Always-accessible hold (`LT(4, KC_SPC)`)
+- Left inner thumb: `Tab` tap, Navigation hold (`LT(1, KC_TAB)`)
+- Right inner thumb: `Backspace` tap, Symbols hold (`LT(3, KC_BSPC)`)
+- Right outer thumb: `Enter` tap, Numbers hold (`LT(2, KC_ENT)`)
 
-Space and Enter are on the inner (most accessible) thumbs; Tab and Backspace are on the outer thumbs.
+Space and Enter are on the outer thumbs; Tab and Backspace are on the inner thumbs.
 
 ## Why these design choices
 
 - **No home-row mods:** all alpha keys are tap-only letters for cleaner typing feel.
-- **Space/Enter on inner thumbs:** the most-used keys are on the most accessible thumb position (inner), while Tab and Backspace sit on the outer, less-used position.
-- **Easy nav/edit:** holding Space gives a navigation layer with arrows on both hands, plus Home/End, PgUp/PgDn, and Ctrl/Alt-modified arrow keys for word/paragraph jumping.
+- **Space/Enter on outer thumbs:** Space (left outer) and Enter (right outer) sit on the outermost thumb positions, while Tab and Backspace are on the inner thumbs closer to the alphas.
+- **Easy nav/edit:** holding Tab gives a navigation layer with arrows on both hands, plus Home/End, PgUp/PgDn, and Ctrl/Alt-modified arrow keys for word/paragraph jumping.
 - **Numpad-style numbers:** digits are grouped on the right hand in a numpad-like cluster, while the left hand holds operators and common paired symbols.
 - **Single symbol layer:** both left and right symbol families are available on one layer, avoiding left/right symbol-layer mode switching.
 - **Always-accessible actions:** a dedicated thumb-held layer exposes one-shot `Shift/Ctrl/Alt/Cmd`, plus `Meh`, `Hyper`, `Caps`, media keys, and `QK_BOOT` for flashing.
