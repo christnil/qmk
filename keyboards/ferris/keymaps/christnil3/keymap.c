@@ -1,19 +1,6 @@
 #include QMK_KEYBOARD_H
 
-enum layers {
-    COLEMAK_DH_LAYER,
-    NAVIGATION_LAYER,
-    NUMBERS_LAYER,
-    SYMBOLS_LAYER,
-    ALWAYS_ACCESSIBLE_LAYER,
-    FUNCTION_MEDIA_LAYER,
-    QWERTY_LAYER,
-};
-
-enum custom_keycodes {
-    COLEMAK = SAFE_RANGE,
-    QWERTY,
-};
+enum layers { COLEMAK_DH_LAYER, NAVIGATION_LAYER, NUMBERS_LAYER, SYMBOLS_LAYER, ALWAYS_ACCESSIBLE_LAYER, FUNCTION_MEDIA_LAYER };
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -21,14 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,
     KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O,
     KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH,
-    LT(ALWAYS_ACCESSIBLE_LAYER, KC_TAB), LT(NAVIGATION_LAYER, KC_SPC), LT(SYMBOLS_LAYER, KC_BSPC), LT(NUMBERS_LAYER, KC_ENT)
-  ),
-
-  [QWERTY_LAYER] = LAYOUT_split_3x5_2(
-    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
-    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,
-    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-    LT(ALWAYS_ACCESSIBLE_LAYER, KC_TAB), LT(NAVIGATION_LAYER, KC_SPC), LT(SYMBOLS_LAYER, KC_BSPC), LT(NUMBERS_LAYER, KC_ENT)
+    LT(ALWAYS_ACCESSIBLE_LAYER, KC_TAB), LT(NAVIGATION_LAYER, KC_SPC), LT(SYMBOLS_LAYER, KC_ENT), LT(NUMBERS_LAYER, KC_BSPC)
   ),
 
   [NAVIGATION_LAYER] = LAYOUT_split_3x5_2(
@@ -53,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [ALWAYS_ACCESSIBLE_LAYER] = LAYOUT_split_3x5_2(
-    OSM(MOD_LSFT), OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), KC_CAPS, KC_TRNS, KC_TRNS, KC_TRNS, QWERTY, COLEMAK,
+    OSM(MOD_LSFT), OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), KC_CAPS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     OSM(MOD_MEH),  OSM(MOD_HYPR), KC_ESC,        KC_ENT,        KC_BSPC, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     KC_TAB,        KC_TRNS,       KC_TRNS,       KC_TRNS,       QK_BOOT, KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT, KC_DEL,
     KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS
@@ -70,21 +50,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, NAVIGATION_LAYER, NUMBERS_LAYER, FUNCTION_MEDIA_LAYER);
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!record->event.pressed) {
-        return true;
-    }
-
-    switch (keycode) {
-        case COLEMAK:
-            set_single_persistent_default_layer(COLEMAK_DH_LAYER);
-            return false;
-        case QWERTY:
-            set_single_persistent_default_layer(QWERTY_LAYER);
-            return false;
-    }
-
-    return true;
 }

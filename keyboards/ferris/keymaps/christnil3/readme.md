@@ -42,8 +42,7 @@ For Elite-Pi, copy the generated `.uf2` file to the board's USB mass-storage dri
 - `2`: Numbers (numpad-style)
 - `3`: Symbols (single layer, no left/right split)
 - `4`: Always-accessible utilities and one-shot modifiers
-- `5`: Function + media (tri-layer)
-- `6`: QWERTY base
+- `5`: Function + media (tri-layer, Nav + Numbers held together)
 
 Compared to `christnil2`, this removes dedicated mouse and split-symbol layers and leans on thumbs for access.
 
@@ -54,29 +53,21 @@ The alpha rows are plain Colemak-DH (no mod-tap home row).
 Thumb keys do most of the work:
 
 - Left outer thumb: `Tab` tap, Always-accessible hold (`LT(4, KC_TAB)`)
-- Left inner thumb: `Backspace` tap, Navigation hold (`LT(1, KC_BSPC)`)
-- Right inner thumb: `Space` tap, Symbols hold (`LT(3, KC_SPC)`)
-- Right outer thumb: `Enter` tap, Numbers hold (`LT(2, KC_ENT)`)
+- Left inner thumb: `Space` tap, Navigation hold (`LT(1, KC_SPC)`)
+- Right inner thumb: `Enter` tap, Symbols hold (`LT(3, KC_ENT)`)
+- Right outer thumb: `Backspace` tap, Numbers hold (`LT(2, KC_BSPC)`)
 
-This keeps your primary layer switching on strong thumb keys, as requested.
+Space and Enter are on the inner (most accessible) thumbs; Tab and Backspace are on the outer thumbs.
 
 ## Why these design choices
 
 - **No home-row mods:** all alpha keys are tap-only letters for cleaner typing feel.
-- **Easy nav/edit:** holding backspace gives a navigation layer with arrows on both hands (including a full left-hand cluster with `Left/Down/Right` around `Down`), plus dedicated `Backspace` (top-right), `Enter` (below it), `Delete` (bottom-right), `PgUp/PgDn` on the left bottom-right, and a right-hand 3x4 arrow block where rows are `Ctrl`, plain, and `Alt` in the same `Left/Down/Up/Right` order.
+- **Space/Enter on inner thumbs:** the most-used keys are on the most accessible thumb position (inner), while Tab and Backspace sit on the outer, less-used position.
+- **Easy nav/edit:** holding Space gives a navigation layer with arrows on both hands, plus Home/End, PgUp/PgDn, and Ctrl/Alt-modified arrow keys for word/paragraph jumping.
 - **Numpad-style numbers:** digits are grouped on the right hand in a numpad-like cluster, while the left hand holds operators and common paired symbols.
 - **Single symbol layer:** both left and right symbol families are available on one layer, avoiding left/right symbol-layer mode switching.
-- **Always-accessible actions:** a dedicated thumb-held layer exposes one-shot `Cmd/Ctrl/Alt/Shift`, plus `Meh`, `Hyper`, `Caps`, media keys, and base-layout toggles.
+- **Always-accessible actions:** a dedicated thumb-held layer exposes one-shot `Shift/Ctrl/Alt/Cmd`, plus `Meh`, `Hyper`, `Caps`, media keys, and `QK_BOOT` for flashing.
 - **Hard-access function/media layer:** holding both Navigation and Numbers together activates function/media (tri-layer), so `F` keys exist but stay out of the way.
-
-## QWERTY swap (optional)
-
-The Always-accessible layer includes persistent base toggles:
-
-- `QWERTY` sets default layer to QWERTY.
-- `COLEMAK` sets default layer back to Colemak-DH.
-
-These are persistent via `set_single_persistent_default_layer`, so they survive reboot.
 
 ## Notes for iteration
 
