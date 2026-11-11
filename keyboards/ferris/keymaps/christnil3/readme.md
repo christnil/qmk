@@ -1,0 +1,84 @@
+# christnil3 Ferris Sweep keymap (first draft)
+
+This is a first-draft evolution of `christnil2` focused on three goals:
+
+- Easier to use day-to-day.
+- Fewer layers than `christnil2`.
+- No home-row mods on alpha keys.
+
+## Build and flash
+
+### Install QMK
+```sh
+brew install qmk/qmk/qmk
+```
+
+### Setup QMK (one-time)
+```sh
+qmk setup
+```
+
+### Compile
+```sh
+qmk compile -kb ferris/sweep -km christnil3
+```
+
+For Elite-Pi (`.uf2` output):
+```sh
+qmk compile -kb ferris/sweep -km christnil3 -e CONVERT_TO=elite_pi
+```
+
+### Flash
+```sh
+qmk flash -kb ferris/sweep -km christnil3
+```
+
+For Elite-Pi, copy the generated `.uf2` file to the board's USB mass-storage drive in boot mode.
+
+## Layer overview
+
+- `0`: Colemak-DH base
+- `1`: Navigation/editing
+- `2`: Numbers (numpad-style)
+- `3`: Symbols (single layer, no left/right split)
+- `4`: Always-accessible utilities and one-shot modifiers
+- `5`: Function + media (tri-layer, Nav + Numbers held together)
+
+Compared to `christnil2`, this removes dedicated mouse and split-symbol layers and leans on thumbs for access.
+
+## Base layer behavior
+
+The alpha rows are plain Colemak-DH (no mod-tap home row).
+
+Thumb keys do most of the work:
+
+- Left outer thumb: `Space` tap, Always-accessible hold (`LT(4, KC_SPC)`)
+- Left inner thumb: `Tab` tap, Navigation hold (`LT(1, KC_TAB)`)
+- Right inner thumb: `Backspace` tap, Symbols hold (`LT(3, KC_BSPC)`)
+- Right outer thumb: `Enter` tap, Numbers hold (`LT(2, KC_ENT)`)
+
+Space and Enter are on the outer thumbs; Tab and Backspace are on the inner thumbs.
+
+## Why these design choices
+
+- **No home-row mods:** all alpha keys are tap-only letters for cleaner typing feel.
+- **Space/Enter on outer thumbs:** Space (left outer) and Enter (right outer) sit on the outermost thumb positions, while Tab and Backspace are on the inner thumbs closer to the alphas.
+- **Easy nav/edit:** holding Tab gives a navigation layer with arrows on both hands, plus Home/End, PgUp/PgDn, and Ctrl/Alt-modified arrow keys for word/paragraph jumping.
+- **Numpad-style numbers:** digits are grouped on the right hand in a numpad-like cluster, while the left hand holds operators and common paired symbols.
+- **Single symbol layer:** both left and right symbol families are available on one layer, avoiding left/right symbol-layer mode switching.
+- **Always-accessible actions:** a dedicated thumb-held layer exposes one-shot `Shift/Ctrl/Alt/Cmd`, plus `Meh`, `Hyper`, `Caps`, media keys, and `QK_BOOT` for flashing.
+- **Hard-access function/media layer:** holding both Navigation and Numbers together activates function/media (tri-layer), so `F` keys exist but stay out of the way.
+
+## Notes for iteration
+
+This is intentionally a first draft. After some real typing time, likely tweaks are:
+
+- Move arrow cluster location in Nav layer.
+- Rebalance specific symbols based on your coding/writing frequency.
+- Adjust `TAPPING_TERM` if thumb holds trigger too easily or not easily enough.
+
+## Layout preview
+
+<!-- layout-preview:start -->
+![christnil3 layout](./christnil3.svg)
+<!-- layout-preview:end -->
