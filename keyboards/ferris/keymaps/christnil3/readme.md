@@ -38,11 +38,11 @@ For Elite-Pi, copy the generated `.uf2` file to the board's USB mass-storage dri
 ## Layer overview
 
 - `0`: Colemak-DH base
-- `1`: Navigation/editing
+- `1`: Window manager
 - `2`: Numbers (numpad-style)
 - `3`: Symbols (single layer, no left/right split)
 - `4`: Always-accessible utilities and one-shot modifiers
-- `5`: Function + media (tri-layer, Nav + Numbers held together)
+- `5`: Function + media (tri-layer, WM + Numbers held together)
 
 Compared to `christnil2`, this removes dedicated mouse and split-symbol layers and leans on thumbs for access.
 
@@ -53,7 +53,7 @@ The alpha rows are plain Colemak-DH (no mod-tap home row).
 Thumb keys do most of the work:
 
 - Left outer thumb: `Space` tap, Always-accessible hold (`LT(4, KC_SPC)`)
-- Left inner thumb: `Tab` tap, Navigation hold (`LT(1, KC_TAB)`)
+- Left inner thumb: `Tab` tap, Window manager hold (`LT(1, KC_TAB)`)
 - Right inner thumb: `Backspace` tap, Symbols hold (`LT(3, KC_BSPC)`)
 - Right outer thumb: `Enter` tap, Numbers hold (`LT(2, KC_ENT)`)
 
@@ -63,17 +63,19 @@ Space and Enter are on the outer thumbs; Tab and Backspace are on the inner thum
 
 - **No home-row mods:** all alpha keys are tap-only letters for cleaner typing feel.
 - **Space/Enter on outer thumbs:** Space (left outer) and Enter (right outer) sit on the outermost thumb positions, while Tab and Backspace are on the inner thumbs closer to the alphas.
-- **Easy nav/edit:** holding Tab gives a navigation layer with arrows on both hands, plus Home/End, PgUp/PgDn, and Ctrl/Alt-modified arrow keys for word/paragraph jumping.
+- **Window management:** hold Tab for workspaces 1–5 on A/R/S/T/G, or use the row above to move a window. N/E/I/O focus left/down/up/right.
+- **Navigation and prefixes:** hold Space for arrows on N/E/I/O, Ctrl+A on M, Ctrl+B on J, and Escape on S.
+- **Corner Escape:** hold Backspace and tap Q for Escape. Hold Enter and tap Z for an exclamation mark.
 - **Numpad-style numbers:** digits are grouped on the right hand in a numpad-like cluster, while the left hand holds operators and common paired symbols.
 - **Single symbol layer:** both left and right symbol families are available on one layer, avoiding left/right symbol-layer mode switching.
-- **Always-accessible actions:** a dedicated thumb-held layer exposes one-shot `Shift/Ctrl/Alt/Cmd`, plus `Meh`, `Hyper`, `Caps`, media keys, and `QK_BOOT` for flashing.
-- **Hard-access function/media layer:** holding both Navigation and Numbers together activates function/media (tri-layer), so `F` keys exist but stay out of the way.
+- **Always-accessible actions:** a dedicated thumb-held layer exposes one-shot `Shift/Ctrl/Alt/Cmd`, plus `Meh`, `Hyper`, `Caps`, and media keys.
+- **Hard-access function/media layer:** holding both WM and Numbers together activates function/media (tri-layer), so `F` keys exist but stay out of the way. Hold both and tap V for the bootloader.
 
 ## Notes for iteration
 
 This is intentionally a first draft. After some real typing time, likely tweaks are:
 
-- Move arrow cluster location in Nav layer.
+- Move arrow cluster location on the Space layer.
 - Rebalance specific symbols based on your coding/writing frequency.
 - Adjust `TAPPING_TERM` if thumb holds trigger too easily or not easily enough.
 

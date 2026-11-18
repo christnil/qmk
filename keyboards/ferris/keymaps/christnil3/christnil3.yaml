@@ -4,38 +4,11 @@ layers:
   - [Q, W, F, P, B, J, L, U, Y, ;]
   - [A, R, S, T, G, M, N, E, I, O]
   - [Z, X, C, D, V, K, H, ',', ., /]
-  - ['LT(ALWAYS ACCESSIBLE LAYER,SPC)', 'LT(NAVIGATION LAYER,TAB)', 'LT(SYMBOLS LAYER,BSPC)', 'LT(NUMBERS LAYER,ENT)']
+  - ['LT(ALWAYS ACCESSIBLE LAYER,SPC)', 'LT(WM LAYER,TAB)', 'LT(SYMBOLS LAYER,BSPC)', 'LT(NUMBERS LAYER,ENT)']
   L1:
-  - - ESC
-    - {t: ▽, type: trans}
-    - HOME
-    - UP
-    - END
-    - Ctl+LEFT
-    - Ctl+DOWN
-    - Ctl+UP
-    - Ctl+RGHT
-    - BSPC
-  - - TAB
-    - {t: ▽, type: trans}
-    - LEFT
-    - DOWN
-    - RGHT
-    - LEFT
-    - DOWN
-    - UP
-    - RGHT
-    - ENT
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - INS
-    - PGUP
-    - PGDN
-    - Alt+LEFT
-    - Alt+DOWN
-    - Alt+UP
-    - Alt+RGHT
-    - DEL
+  - [Hyper+1, Hyper+2, Hyper+3, Hyper+4, Hyper+5, Meh+TAB, Hyper+LEFT, Hyper+DOWN, Hyper+UP, Hyper+RGHT]
+  - [Meh+1, Meh+2, Meh+3, Meh+4, Meh+5, Meh+ENT, Meh+LEFT, Meh+DOWN, Meh+UP, Meh+RGHT]
+  - [Hyper+C, Meh+V, Meh+Z, Meh+T, Meh+G, Meh+S, Meh+A, 'Meh+,', Meh+., Meh+/]
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -67,7 +40,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   L3:
-  - ['!', '@', '#', $, '%', ^, '&', '*', '|', '`']
+  - [ESC, '@', '#', $, '%', ^, '&', '*', '|', '`']
   - [(, ), '[', ']', '=', _, '-', +, /, \]
   - ['{', '}', <, '>', '~', ':', ;, '"', '''', '?']
   - - {t: ▽, type: trans}
@@ -80,17 +53,17 @@ layers:
     - {t: LALT, h: sticky}
     - {t: LGUI, h: sticky}
     - CAPS
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - Ctl+B
+    - HOME
+    - PGDN
+    - PGUP
+    - END
   - - {t: MEH, h: sticky}
     - {t: HYPR, h: sticky}
     - ESC
     - ENT
     - BSPC
-    - {t: ▽, type: trans}
+    - Ctl+A
     - LEFT
     - DOWN
     - UP
@@ -99,7 +72,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - QK BOOT
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - MPRV
     - MPLY
@@ -111,7 +84,7 @@ layers:
     - {t: ▽, type: trans}
   L5:
   - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10]
-  - - {t: ▽, type: trans}
+  - - INS
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -125,7 +98,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - QK BOOT
     - MPRV
     - MPLY
     - MNXT

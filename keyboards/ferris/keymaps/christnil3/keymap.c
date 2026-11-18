@@ -18,26 +18,40 @@ enum layers { COLEMAK_DH_LAYER, WM_LAYER, NUMBERS_LAYER, SYMBOLS_LAYER, ALWAYS_A
 #define WM_MV3 HYPR(KC_3)
 #define WM_MV4 HYPR(KC_4)
 #define WM_MV5 HYPR(KC_5)
-#define WM_FL MEH(KC_LEFT)   // focus
+// focus
+#define WM_FL MEH(KC_LEFT)
 #define WM_FD MEH(KC_DOWN)
 #define WM_FU MEH(KC_UP)
 #define WM_FR MEH(KC_RGHT)
-#define WM_ML HYPR(KC_LEFT)  // move window
+// move window
+#define WM_ML HYPR(KC_LEFT)
 #define WM_MD HYPR(KC_DOWN)
 #define WM_MU HYPR(KC_UP)
 #define WM_MR HYPR(KC_RGHT)
-#define WM_PREV MEH(KC_TAB)  // previous workspace
-#define WM_PROM MEH(KC_ENT)  // promote to master
-#define WM_RPRV MEH(KC_COMM) // rotate previous
-#define WM_RNXT MEH(KC_DOT)  // rotate next
-#define WM_HELP MEH(KC_SLSH) // cheat sheet
-#define WM_SCR MEH(KC_S)     // scratchpad
-#define WM_AGNT MEH(KC_A)    // agents
-#define WM_CLOS HYPR(KC_C)   // close window (HYPR on purpose: harder to hit by accident)
-#define WM_FLT MEH(KC_V)     // float toggle
-#define WM_ZEN MEH(KC_Z)     // fullscreen / zen (not F: Aerospace uses MEH+F for workspace 3)
-#define WM_FLIP MEH(KC_T)    // flip split
-#define WM_GRP MEH(KC_G)     // tab group
+// previous workspace
+#define WM_PREV MEH(KC_TAB)
+// promote to master
+#define WM_PROM MEH(KC_ENT)
+// rotate previous
+#define WM_RPRV MEH(KC_COMM)
+// rotate next
+#define WM_RNXT MEH(KC_DOT)
+// cheat sheet
+#define WM_HELP MEH(KC_SLSH)
+// scratchpad
+#define WM_SCR MEH(KC_S)
+// agents
+#define WM_AGNT MEH(KC_A)
+// close window (HYPR on purpose: harder to hit by accident)
+#define WM_CLOS HYPR(KC_C)
+// float toggle
+#define WM_FLT MEH(KC_V)
+// fullscreen / zen (not F: Aerospace uses MEH+F for workspace 3)
+#define WM_ZEN MEH(KC_Z)
+// flip split
+#define WM_FLIP MEH(KC_T)
+// tab group
+#define WM_GRP MEH(KC_G)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -65,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [SYMBOLS_LAYER] = LAYOUT_split_3x5_2(
-    KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_PIPE, KC_GRV,
+    KC_ESC,  KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_PIPE, KC_GRV,
     KC_LPRN, KC_RPRN, KC_LBRC, KC_RBRC, KC_EQL,  KC_UNDS, KC_MINS, KC_PLUS, KC_SLSH, KC_BSLS,
     KC_LCBR, KC_RCBR, KC_LT,   KC_GT,   KC_TILD, KC_COLN, KC_SCLN, KC_DQUO, KC_QUOT, KC_QUES,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
@@ -74,8 +88,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Hold Space: one-shot mods + navigation. Home/PgDn/PgUp/End (from the old NAV layer)
   // sit above the arrows.
   [ALWAYS_ACCESSIBLE_LAYER] = LAYOUT_split_3x5_2(
-    OSM(MOD_LSFT), OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), KC_CAPS, KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
-    OSM(MOD_MEH),  OSM(MOD_HYPR), KC_ESC,        KC_ENT,        KC_BSPC, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
+    OSM(MOD_LSFT), OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), KC_CAPS, LCTL(KC_B), KC_HOME, KC_PGDN, KC_PGUP, KC_END,
+    OSM(MOD_MEH),  OSM(MOD_HYPR), KC_ESC,        KC_ENT,        KC_BSPC, LCTL(KC_A), KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     KC_TAB,        KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS, KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT, KC_DEL,
     KC_TRNS,       KC_TRNS,       KC_TRNS,       KC_TRNS
   ),
